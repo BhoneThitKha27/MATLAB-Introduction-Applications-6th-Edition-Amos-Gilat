@@ -1,0 +1,20 @@
+R1 = 16;
+R2 = 6.5;
+R3 = 12;
+R4 = 9.5;
+
+C1C2 = R1+R2;
+C1C3 = R1+R3;
+C1C4 = R1+R4;
+C2C3 = R2+R3;
+C3C4 = R3+R4;
+
+% I DON'T FUCKINGGG KNOW WHERE THIS FORMULA FUCKINGGG CAME FROM
+
+Gama1 = acos((C1C2^2+C1C3^2-C2C3^2)/(2*C1C2*C1C3));
+
+Gama2 = acos((C1C3^2+C1C4^2-C3C4^2)/(2*C1C3*C1C4));
+
+Gama3 = Gama1+Gama2;
+
+C2C4 = sqrt(C1C2^2+C1C4^2-2*C1C2*C1C4*cos(Gama3))
