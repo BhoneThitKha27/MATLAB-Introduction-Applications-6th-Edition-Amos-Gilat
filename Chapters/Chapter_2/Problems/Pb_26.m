@@ -1,0 +1,1 @@
+C = [linspace(6, 6, 5)', linspace(8, 8, 5)']

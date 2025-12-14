@@ -1,0 +1,1 @@
+B = [linspace(4, 4, 5), linspace(5, 5, 4)]
