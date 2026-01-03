@@ -1,0 +1,11 @@
+A = [5 -3 7; 1 0 -6; -4 8 9]
+B = [3 2 -1; 6 8 -7; 4 4 0]
+C = [-9 8 3; 1 7 -5; 3 3 6]
+ApB = A+B
+BpA = B+A
+AtBC = A*(B*C)
+ABtC = (A*B)*C
+BpC5 = 5*(B+C)
+B5pC5 = 5*B+5*C
+ApBtC = (A+B)*C
+AtCpBtC = A*C+B*C
