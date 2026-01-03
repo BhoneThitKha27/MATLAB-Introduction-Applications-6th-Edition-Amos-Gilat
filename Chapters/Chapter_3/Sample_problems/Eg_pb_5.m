@@ -1,0 +1,10 @@
+v0t = 54*5280/3600;
+v0c = 28*5280/3600;
+ac = 4;
+t = 0 : 10;
+y = -400+v0t*t;
+x = -200+v0c*t+0.5*ac*t.^2;
+d = sqrt(x.^2+y.^2);
+vc = v0c + ac*t;
+sp_tRc = sqrt(vc.^2+v0t^2);
+tb = [t' y' x' d' vc' sp_tRc']
