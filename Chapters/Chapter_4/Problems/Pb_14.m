@@ -1,0 +1,10 @@
+L = 144;
+a = 4:0.01:14;
+b = 1.9*a;
+S = (L-2*(a+b))/4;
+D = sqrt((a/2).^2+(b/2).^2);
+h = sqrt(S.^2-D.^2);
+V = a.*b.*h/3;
+[Vmax, i] = max(V)
+amax = a(i)
+bmax = b(i)

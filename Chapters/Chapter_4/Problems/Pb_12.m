@@ -1,0 +1,10 @@
+A = 600;
+a = 10:0.1:120;
+h = 2*A./a;
+q = atand(a./(2*h));
+H = 2+h+2./sind(q);
+B = 2*H.*tand(q);
+AA = B.*H/2;
+[AAmin, i] = min(AA)
+amin = a(i)
+hmin = h(i)
