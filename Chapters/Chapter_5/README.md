@@ -134,4 +134,52 @@ plot(x,yd,'--r')               % Two more graphs are added to the figure
 plot(x,ydd,':k')
 hold off
 ```
-__________________________________________________________________________________________________________
+__________________________________________________________________________________________________________________________________________
+
+# Using the line Command
+
+\- graphs (lines) can be added to a plot that already exists
+
+![Formatted 2D Plot](Photos/line_command.png)
+
+```matlab
+line(x,y,‘linestyle’,‘--’,‘color’,‘r’,‘marker’,‘o’)
+```
+\- add a dashed red line with circular markers to a plot that already exists
+
+* the plot command starts a new plot every time it is executed, while the line command adds lines to a plot that already exists
+
+________________________________________________________________________________________________________________________________________
+
+# Formatting a Plot Using Commands
+
+## The xlabel and ylabel commands
+
+\- Labels can be placed next to the axes with the xlabel and ylabel command
+
+```matlab
+xlabel(‘text as string’)
+ylabel(‘text as string’)
+```
+_______________________________________________________________________________________________________
+
+## The title command
+
+\- A title can be added to the plot with the command
+
+```matlab
+title(‘text as string’)
+```
+_____________________________________________________________________________________________________
+
+## The text command
+
+\- A text label can be placed in the plot with the text or gtext commands
+
+| Command   | Meaning                                                                 |
+|-----------|-------------------------------------------------------------------------|
+| `text(x,y,'string')`  | Places text at coordinates (x,y) in the figure (according to the axes of the
+figure)                    |
+| `gtext('string')`     | User clicks figure to place text interactively                     |
+
+_____________________________________________________________________________________________________-
