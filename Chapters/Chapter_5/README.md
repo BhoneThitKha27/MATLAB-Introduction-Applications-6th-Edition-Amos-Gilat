@@ -302,23 +302,78 @@ The command for making a plot with error bars that are not symmetric
 * The lengths of the four vectors x, y, d, and u must be the same.
 * At each point the error bar extends from y(i)-d(i) to y(i)+u(i).
 
-__________________________________________________________________________________________________________________
+______________________________________________________________________________________________________________________________________________________________________________________
 
+# HISTOGRAMS
 
+\- A histogram is a vertical bar graph that shows how data is distributed by splitting the data range into bins and displaying how many values fall into each bin
 
+```matlab
+hist(y)
+```
 
+* y is a vector with the data points.
+* MATLAB divides the range of the data points into 10 equally spaced subranges (bins) and then plots the number of data points in each bin
 
+```matlab
+hist(y,nbins)
+% or
+hist(y,x)
+```
+* nbins is a scalar that defines the number of bins.
+* MATLAB divides the range in equally spaced subranges.
 
+* x is a vector that specifies the location of the center of each bin (the distance between the centers does not have to be the same for all the bins).
+* The edges of the bins are at the middle point between the centers.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* The output n is a vector
+* The number of elements in n is equal to the number of bins
 
+```matlab
+n=hist(y)
+n=hist(y,nbins)
+n=hist(y,x)
+```
+---------------------------------------------------------------------------------------
 
+* optional numerical output is the location of the bins
 
+```matlab
+[n xout]=hist(y)
+[n xout]=hist(y,nbins)
+```
 
+________________________________________________________________________________________________________________________
 
+# POLAR PLOTS
 
+\- The polar command is used to plot functions in polar coordinates (the angle and the radius (distance) to the point)
 
+![polar_command](Photos/polar_command.png)
 
+______________________________________________________________________________________________________________________________________________
 
+# PUTTING MULTIPLE PLOTS ON THE SAME PAGE
+
+\- Multiple plots can be created on the same page with the subplot command
+
+```matlab
+subplot(m,n,p)
+```
+* the command subplot(3,2,1) creates six areas arranged in three rows and two columns as shown, and makes the upper left subplot current
+
+________________________________________________________________________________________________________________________________________________
+
+# Windows can be closed with the close command
+
+| Command      | Meaning                              |
+|--------------|--------------------------------------|
+| `close`      | Close the active Figure Window        |
+| `close(n)`   | Close the nth Figure Window           |
+| `close all`  | Close all open Figure Windows         |
+
+_______________________________________________________________________________________________
 
 
