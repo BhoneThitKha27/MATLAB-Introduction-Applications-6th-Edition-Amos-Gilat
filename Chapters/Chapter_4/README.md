@@ -54,6 +54,7 @@ fprintf('..text...%g...%g...%f...',variable1,variable2,variable3)
 ### –5.2f
 
 * Flags
+
 | Flag | Description |
 |------|------------|
 | `-`  | Left-justifies the number within the field |
@@ -63,6 +64,7 @@ fprintf('..text...%g...%g...%f...',variable1,variable2,variable3)
 * 5.2  -  Field width and precision (optional) (5 is the integer part and 2 is the fractional digit)
 
 * Conversion character (required)
+
 | Specifier | Description |
 |-----------|------------|
 | `e`       | Exponential notation with lowercase `e` (e.g., `1.709098e+001`) |
