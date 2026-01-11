@@ -1,15 +1,16 @@
-Fucking notes to remember
+# Fucking notes to remember
 
 ![Formatted 2D Plot](Photos/formatted_two_dimensional_plot.png)
 
-Figure 5-1: Example of a formatted two-dimensional plot
+**Figure 5-1:** Example of a formatted two-dimensional plot
 
 ______________________________________________________________________________________________
 
-THE plot COMMAND
+## THE plot COMMAND
 
-plot(x,y)  -  to create two-dimensional plots
-
+```matlab
+plot(x,y)  % to create two-dimensional plots
+```
 two vectors must have the same number of elements
 
 ![Formatted 2D Plot](Photos/plot_command.png)
@@ -26,6 +27,8 @@ two vectors must have the same number of elements
 | dotted          | :         |
 | dash-dot        | -.        |
 
+-----------------------------------------------------------------------------------
+
 ## Line Color
 
 | Color   | Specifier |
@@ -39,7 +42,7 @@ two vectors must have the same number of elements
 | black   | k         |
 | white   | w         |
 
----
+------------------------------------------------------------------------------
 
 ## Marker Type Specifiers
 
@@ -59,7 +62,7 @@ two vectors must have the same number of elements
 | five-pointed star        | p         |
 | six-pointed star         | h         |
 
----
+----------------------------------------------------------------------------------------------------------------------------
 
 ## Notes about using the specifiers
 
@@ -77,7 +80,7 @@ plot(x,y,'*')       % The points are marked with * (no line between the points)
 plot(x,y,'g:d')     % A green dotted line connects the points that are marked with diamond markers
 ```
 
----
+-------------------------------------------------------------------------------------------------------------------------
 
 ## Property Name and Property Value
 
