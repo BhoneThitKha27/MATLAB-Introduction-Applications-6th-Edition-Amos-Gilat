@@ -178,8 +178,8 @@ ________________________________________________________________________________
 
 | Command   | Meaning                                                                 |
 |-----------|-------------------------------------------------------------------------|
-| `text(x,y,'string')`  | Places text at coordinates (x,y) in the figure (according to the axes of the
-figure)                    |
+| `text(x,y,'string')`  | Places text at coordinates (x,y) in the figure 
+(according to the axes of the figure)                    |
 | `gtext('string')`     | User clicks figure to place text interactively                     |
 
 _____________________________________________________________________________________________________-
