@@ -2,7 +2,8 @@
 
 a specific value is entered in the Command Window when the script file is executed
 
-* variable_name = input('prompt message','s')          ('s' inside the command defines the characters that will be entered as a string)
+
+ ``` matlab variable_name = input('prompt message','s')```          ('s' inside the command defines the characters that will be entered as a string)
 
 ____________________________________________________________________________________________________________________________________________________________
 
@@ -10,8 +11,7 @@ ________________________________________________________________________________
 
 ## The disp Command
 
-* disp(name of a variable) or disp('text as string')  -  to display the elements of a variable without displaying the name of the variable,
-  and to display text
+```matlab disp(name of a variable) or disp('text as string')```  -  to display the elements of a variable without displaying the name of the variable, and to display text
 
 ___________________________________________________________________________________________________________________________________________________________
 
