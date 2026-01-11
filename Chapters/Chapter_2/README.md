@@ -19,120 +19,145 @@ var = [_;_;_] or [
 ```
 ________________________________________________________________________________________________________
 
-Creating a vector with constant spacing
+# Creating a vector with constant spacing
 
+```matlab
 x = [first element:spacing:last element]
+```
 
 * if spacing is omitted, the default is one
 
 __________________________________________________________________________________________________________
 
-Creating  a vector with linear spacing 
+# Creating  a vector with linear spacing 
 
+```matlab
 var = linspace(first element, last element, no of element)
+```
 
 * if the no of element omitted, the default is 100
 
 __________________________________________________________________________________________________________
 
-Creating a two-dimensional array
+# Creating a two-dimensional array
 
+```matlab
 var = [1st row elements; 2nd row elements; last row elements]
+```
 
 _____________________________________________________________________________________________________________
 
-zeros(m, n) - create all matrix with all 0 elements
+```matlab
+zeros(m, n)
+```
 
-ones(m, n) - same but 1 instead of 0 
+\- create all matrix with all 0 elements
 
-eye(m, n) - diagonal elements are 1 and the rests are 0
+```matlab
+ones(m, n)
+```
+
+\- same but 1 instead of 0 
+```matlab
+eye(m, n) 
+```
+
+\- diagonal elements are 1 and the rests are 0
 
 ________________________________________________________________________________________________
 
-Notes about vars in ML
+### Notes about vars in ML
 
 * all var in ML are arrays
-
 * scalar is an array with one element
-
 * vector is an array with one row or one column
-
 * matrix is an array with both rows and columns
 
 ___________________________________________________________________________________________________
 
-The Transpose operator
+# The Transpose operator
 
-bb = aa'            (vector bb as the traspose of vector aa)
+```matlab
+bb = aa'
+```          
+
+\- vector bb as the traspose of vector aa
 
 ___________________________________________________________________________________________________
 
-Array addressing
+# Array addressing
 
-Vector
-
+```matlab
+% Vector
 var(_) = _
+```
 
-Matrix
-
+```matlab
+% Matrix
 var(k, p) = _
+```
 __________________________________________________________________________________
 
-: in Array addressing
+# : in Array addressing
 
-Vector
+## Vector
 
-var(:) - all elements
+| Syntax      | Meaning                  |
+|------------|--------------------------|
+| `var(:)`   | All elements             |
+| `var(m:n)` | Elements m through n     |
 
-var(m:n) - elements m through n
+## Matrix
 
-Matrix
-
-var(:,n) - all rows of column n
-
-var(n,:) - all columns of row n
-
-var(:,m:n) - all rows between columns m and n
-
-var(m:n,:) - all columns between rows m and n
-
-var(m:n,p:q) -  rows m through n and columns p through q
+| Syntax          | Meaning                                           |
+|-----------------|--------------------------------------------------|
+| `var(:,n)`      | All rows of column n                             |
+| `var(n,:)`      | All columns of row n                             |
+| `var(:,m:n)`    | All rows between columns m and n                |
+| `var(m:n,:)`    | All columns between rows m and n                |
+| `var(m:n,p:q)`  | Rows m through n and columns p through q        |
 
 ____________________________________________________________________________________________
 
-Adding elements to a vector
+# Adding elements to a vector
 
+```matlab
 var(_:_) = _
-
+```
 ________________________________________________________________________________
 
-Adding elements to a matrix
-
+# Adding elements to a matrix
+```matlab
 var(_,_) = _
+```
+``` matlab
+var = [var var]
+```
 
-var = [var var] - append matrix
+\- append matrix
 
 _____________________________________________________________________________________________
 
-Deleting elements
+# Deleting elements
 
+```matlab
 var(_) = []
+```
 
 _________________________________________________________________________________________________
 
-Built-in funcs for arrays
+# Built-in funcs for arrays
 
-length(var) - no of elements in vector
-
-size(var) - no of m n of array
-
-reshape(var, m,n) - create m by n matrix from elements of matrix var
-                    elements are taken  column after column
-                    matrix var must have m times n elements
-
-diag(v) - create square matrix with elements of v in the diagonal (when v is vector)
-          create vector from diagonal elements of v (when v is matrix)
+| Syntax                  | Meaning                                                                 |
+|-------------------------|-------------------------------------------------------------------------|
+| `length(var)`           | Number of elements in a vector                                          |
+| `size(var)`             | Returns number of rows and columns of an array                          |
+| `reshape(var,m,n)`      | Creates an `m` by `n` matrix from elements of `var`                    |
+|                         | Elements are taken **column by column**                                 |
+|                         | `var` must have `m*n` elements                                          |
+| `diag(v)`               | If `v` is a vector → creates a square matrix with `v` on the diagonal  |
+|                         | If `v` is a matrix → returns a vector of its diagonal elements         |
 
 _______________________________________________________________________________________________________________
 
-strings - '_'
+* strings - '_'
