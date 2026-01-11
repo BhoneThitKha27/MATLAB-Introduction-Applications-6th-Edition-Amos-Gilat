@@ -1,21 +1,21 @@
-Fucking notes to remember
+# Fucking notes to remember
 
-* a specific value is entered in the Command Window when the script file is executed
+a specific value is entered in the Command Window when the script file is executed
 
 * variable_name = input('prompt message','s')          ('s' inside the command defines the characters that will be entered as a string)
 
 ____________________________________________________________________________________________________________________________________________________________
 
-OUTPUT COMMANDS
+# OUTPUT COMMANDS
 
-* The disp Command
+## The disp Command
 
 * disp(name of a variable) or disp('text as string')  -  to display the elements of a variable without displaying the name of the variable,
   and to display text
 
 ___________________________________________________________________________________________________________________________________________________________
 
-* The fprintf Command
+## The fprintf Command
 
 * fprintf('text typed in as a string')  -  text and numerical values of variables can be intermixed and displayed in the same line
 
@@ -27,7 +27,7 @@ ________________________________________________________________________________
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-* Using the fprintf command to display a mix of text and numerical data
+# Using the fprintf command to display a mix of text and numerical data
 
 * fprintf('text as string %-5.2f additional text', variable_name)
 
@@ -41,7 +41,7 @@ ________________________________________________________________________________
 
 --------------------------------------------------------------------------------------------------------------------
 
-* –5.2f
+### –5.2f
 
 * Flag (+ - 0)
 
@@ -62,7 +62,7 @@ ________________________________________________________________________________
 
 _____________________________________________________________________________________________________________________________________________________________________________________
 
-* Using the fprintf command to save output to a file
+# Using the fprintf command to save output to a file
 
 * Writing output to a file requires three steps:
   a) Opening a file using the fopen command.
@@ -71,7 +71,7 @@ ________________________________________________________________________________
 
 * fid = fopen('file_name','permission')
 
-* permission:
+### permission:
 
   * 'r'  -  Open file for reading (default)
   * 'w'  -  Open file for writing. If the file already exists, its content is deleted. If the file does not exist, a new file is created
@@ -82,7 +82,7 @@ ________________________________________________________________________________
 
 _______________________________________________________________________________________________________________________________________________________________________________
 
-* fprintf command can be used to write output to the file
+# fprintf command can be used to write output to the file
 
 * fprintf(fid,'text %-5.2f additional text',variable_name)
 
