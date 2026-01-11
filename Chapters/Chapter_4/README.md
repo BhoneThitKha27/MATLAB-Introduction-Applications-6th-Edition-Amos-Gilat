@@ -22,13 +22,16 @@ ________________________________________________________________________________
 
 ## The fprintf Command
 
-* fprintf('text typed in as a string')  -  text and numerical values of variables can be intermixed and displayed in the same line
+```matlab
+fprintf('text typed in as a string')
+```
+\-  text and numerical values of variables can be intermixed and displayed in the same line
 
-* \n  -  Newline
-
-* \b  -  Backspace
-
-* \t  -  Horizontal tab
+| Escape Character | Description           |
+|-----------------|---------------------|
+| `\n`            | Newline             |
+| `\b`            | Backspace           |
+| `\t`            | Horizontal tab      |
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
