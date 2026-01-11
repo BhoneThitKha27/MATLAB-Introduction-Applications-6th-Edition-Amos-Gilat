@@ -122,11 +122,11 @@ plot(x,y,‘-b’,u,v,‘--r’,t,h,‘g:’)
 ______________________________________________________________________________________________________________________
 
 # Using the hold on and hold off Commands
-
+line_command
 ```matlab
 x=[-2:0.01:4];
 y=3*x.^3-26*x+6;
-yd=9*x.^2-26;
+yd=9*x.^2-26;    
 ydd=18*x;
 plot(x,y,'-b')                 % The first graph is created
 hold on
