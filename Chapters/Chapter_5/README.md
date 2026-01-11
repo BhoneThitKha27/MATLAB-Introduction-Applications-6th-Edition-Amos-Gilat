@@ -15,72 +15,82 @@ two vectors must have the same number of elements
 ![Formatted 2D Plot](Photos/plot_command.png)
 
 ----------------------------------------------------------------------------------------------------------
-Line Specifiers:
+# Line Specifiers
 
-Line Style           Specifier
-solid (default)          -
-dashed                  --
-dotted                   :
-dash-dot                -.
+## Line Style
 
-Line Color           Specifier
-red                     r
-green                   g
-blue                    b
-cyan                    c
-magenta                 m
-yellow                  y
-black                   k
-white                   w
+| Line Style      | Specifier |
+| --------------- | --------- |
+| solid (default) | -         |
+| dashed          | --        |
+| dotted          | :         |
+| dash-dot        | -.        |
 
-----------------------------------------------------------------------------------------------------------------
-marker type specifiers
+## Line Color
 
-Marker Type               Specifier 
-plus sign                     + 
-circle                        o 
-asterisk                      * 
-point                         . 
-cross                         x 
-triangle (pointed up)         ^ 
-triangle (pointeddown)        v
-square                        s
-diamond                       d
-five-pointed star             p
-six-pointed star              h                
-triangle (pointed left)       <
-triangle (pointed right)      >
+| Color   | Specifier |
+| ------- | --------- |
+| red     | r         |
+| green   | g         |
+| blue    | b         |
+| cyan    | c         |
+| magenta | m         |
+| yellow  | y         |
+| black   | k         |
+| white   | w         |
 
-------------------------------------------------------------------------------------------------------
-Notes about using the specifiers
-The specifiers are typed inside the plot command as strings
-Within the string the specifiers can be typed in any order
-The specifiers are optional
+---
 
-plot(x,y) A blue solid line connects the points with no markers(default)
-plot(x,y,‘r’) A red solid line connects the points
-plot(x,y,‘--y’) A yellow dashed line connects the points
-plot(x,y,‘*’) The points are marked with * (no line between the points)
-plot(x,y,‘g:d’) A green dotted line connects the points that are marked with diamond markers
+## Marker Type Specifiers
 
-______________________________________________________________________________________________________________________________________________________________________________
-Property Name and Property Value
+| Marker Type              | Specifier |
+| ------------------------ | --------- |
+| plus sign                | +         |
+| circle                   | o         |
+| asterisk                 | *         |
+| point                    | .         |
+| cross                    | x         |
+| triangle (pointed up)    | ^         |
+| triangle (pointed down)  | v         |
+| triangle (pointed left)  | <         |
+| triangle (pointed right) | >         |
+| square                   | s         |
+| diamond                  | d         |
+| five-pointed star        | p         |
+| six-pointed star         | h         |
 
-plot(x,y,‘-mo’,‘LineWidth’,2,‘markersize’,12, ‘MarkerEdgeColor’,‘g’,‘markerfacecolor’,‘y’)
+---
 
-Property name                                    Description                                               Possible property values
+## Notes about using the specifiers
 
-LineWidth                               Specifies the width of theline.                           A number in units of points (default 0.5).
-(or linewidth)
+* The specifiers are typed inside the plot command as strings
+* Within the string the specifiers can be typed in any order
+* The specifiers are optional
 
-MarkerSize                              Specifies the size of the marker.                                A number in units of points.
-(or markersize)  
+Examples:
 
-MarkerEdgeColor                         Specifies the color of the marker,                  Color specifiers from the table above, typed as a string.
-(or markeredgecolor)             or the color of the edge line for filled markers.
- 
-MarkerFaceColor                Specifies the color of the filling for filled markers.       Color specifiers from the table above, typed as a string.
-(or markerfacecolor)
+```matlab
+plot(x,y)           % A blue solid line connects the points with no markers (default)
+plot(x,y,'r')       % A red solid line connects the points
+plot(x,y,'--y')     % A yellow dashed line connects the points
+plot(x,y,'*')       % The points are marked with * (no line between the points)
+plot(x,y,'g:d')     % A green dotted line connects the points that are marked with diamond markers
+```
+
+---
+
+## Property Name and Property Value
+
+```matlab
+plot(x,y,'-mo','LineWidth',2,'MarkerSize',12,'MarkerEdgeColor','g','MarkerFaceColor','y')
+```
+
+| Property Name   | Description                                                           | Possible Values                                                               |
+| --------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| LineWidth       | Specifies the width of the line                                       | A number in units of points (default 0.5) (or LineWidth)                      |
+| MarkerSize      | Specifies the size of the marker                                      | A number in units of points (or MarkerSize)                                   |
+| MarkerEdgeColor | Specifies the color of the marker or the edge line for filled markers | Color specifiers from the table above, typed as a string (or MarkerEdgeColor) |
+| MarkerFaceColor | Specifies the color of the filling for filled markers                 | Color specifiers from the table above, typed as a string (or MarkerFaceColor) |
 
 _______________________________________________________________________________________________________________________________________________________________________
 
