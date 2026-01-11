@@ -1,6 +1,7 @@
 Fucking notes to remember
 
 ![Formatted 2D Plot](Photos/formatted_two_dimensional_plot.png)
+
 Figure 5-1: Example of a formatted two-dimensional plot
 
 ______________________________________________________________________________________________
