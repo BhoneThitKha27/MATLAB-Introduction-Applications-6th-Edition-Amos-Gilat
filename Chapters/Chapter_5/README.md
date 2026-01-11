@@ -80,7 +80,7 @@ plot(x,y,'*')       % The points are marked with * (no line between the points)
 plot(x,y,'g:d')     % A green dotted line connects the points that are marked with diamond markers
 ```
 
--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Property Name and Property Value
 
@@ -97,4 +97,41 @@ plot(x,y,'-mo','LineWidth',2,'MarkerSize',12,'MarkerEdgeColor','g','MarkerFaceCo
 
 _______________________________________________________________________________________________________________________________________________________________________
 
+# THE fplot COMMAND
 
+![Formatted 2D Plot](Photos/fplot_command.png)
+
+* limits: The limits argument is a vector with two elements that specify the domain of x [xmin,xmax], or a vector with four elements that specifies the domain of x and the limits of the y-axis [xmin,xmax,ymin,ymax].
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+# PLOTTING MULTIPLE GRAPHS IN THE SAME PLOT
+
+```matlab
+plot(x,y,u,v,t,h)
+```
+\- creates three graphs—y vs. x, v vs. u, and h vs. t—all in the same plot
+
+* The vectors of each pair must be of the same length
+
+```matlab
+plot(x,y,‘-b’,u,v,‘--r’,t,h,‘g:’)
+```
+\- plots y vs. x with a solid blue line, v vs.u with a dashed red line, and h vs. t with a dotted green line
+
+______________________________________________________________________________________________________________________
+
+# Using the hold on and hold off Commands
+
+```matlab
+x=[-2:0.01:4];
+y=3*x.^3-26*x+6;
+yd=9*x.^2-26;
+ydd=18*x;
+plot(x,y,'-b')                 % The first graph is created
+hold on
+plot(x,yd,'--r')               % Two more graphs are added to the figure
+plot(x,ydd,':k')
+hold off
+```
+__________________________________________________________________________________________________________
