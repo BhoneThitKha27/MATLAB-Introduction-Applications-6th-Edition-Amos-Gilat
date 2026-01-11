@@ -5,7 +5,7 @@ A specific value is entered in the Command Window when the script file is execut
 ```matlab
 variable_name = input('prompt message','s')
 ```
-'s' inside the command defines the characters that will be entered as a string
+* 's' inside the command defines the characters that will be entered as a string
 
 ____________________________________________________________________________________________________________________________________________________________
 
@@ -37,36 +37,40 @@ fprintf('text typed in as a string')
 
 # Using the fprintf command to display a mix of text and numerical data
 
-* fprintf('text as string %-5.2f additional text', variable_name)
+```matlab
+fprintf('text as string %-5.2f additional text', variable_name)
+```
 
-* fprintf('..text...%g...%g...%f...',variable1,variable2,variable3)
+```matlab
+fprintf('..text...%g...%g...%f...',variable1,variable2,variable3)
+```
 
 * The % sign marks the spot where the number is inserted within the text
-
 * Formatting elements (%-5.2f)
-
 * The name of the variable whose value is displayed
 
 --------------------------------------------------------------------------------------------------------------------
 
 ### –5.2f
 
-* Flag (+ - 0)
-
-  * * Left-justifies the number within the field
-  * * Prints a sign character (+ or –) in front of the number
-  * 0    Adds zeros if the number is shorter than the field
+* Flags
+| Flag | Description |
+|------|------------|
+| `-`  | Left-justifies the number within the field |
+| `+`  | Prints a sign character (`+` or `-`) in front of the number |
+| `0`  | Pads the number with zeros if it is shorter than the field width |
 
 * 5.2  -  Field width and precision (optional) (5 is the integer part and 2 is the fractional digit)
 
 * Conversion character (required)
-
-  * e Exponential notation using lowercase e (e.g., 1.709098e+001)
-  * E Exponential notation using uppercase E (e.g., 1.709098E+001)
-  * f Fixed-point notation (e.g., 17.090980)
-  * g The shorter of e or f notations
-  * G The shorter of E or f notations
-  * i Integer
+  | Specifier | Description |
+|-----------|------------|
+| `e`       | Exponential notation with lowercase `e` (e.g., `1.709098e+001`) |
+| `E`       | Exponential notation with uppercase `E` (e.g., `1.709098E+001`) |
+| `f`       | Fixed-point notation (e.g., `17.090980`) |
+| `g`       | The shorter of `e` or `f` notation (automatic choice) |
+| `G`       | The shorter of `E` or `f` notation (automatic choice) |
+| `i`       | Integer (same as `d` in MATLAB) |
 
 _____________________________________________________________________________________________________________________________________________________________________________________
 
