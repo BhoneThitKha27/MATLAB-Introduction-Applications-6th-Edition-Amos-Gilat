@@ -20,103 +20,88 @@ ________________________________________________________________________________
 
 # Order of precedence
 
-1. parentheses (innermost are executed first)
-2. exponentiation
-3. mutiplication, division
-4. addition, subtraction
+## 1. parentheses (innermost are executed first)
+## 2. exponentiation
+## 3. mutiplication, division
+## 4. addition, subtraction
 
 _________________________________________________________________________________________
 
-Display formats
+# Display formats
 
-format short/long - fixed-point with 4 decimal digits/ 15 ...
-
-format short e/long e - scientific notation with 4 decimal digitals/ 15 ...
-
-format short g/ long g - best of 5 digit fixed or floating point/ 15 ...
-
-format bank - two decimal digits
-
-format compact - eliminates blank lines
-
-format loose - adds blank lines
+| Command             | Meaning                                                                 |
+|--------------------|-------------------------------------------------------------------------|
+| `format short`      | Fixed-point with **4 decimal digits**                                   |
+| `format long`       | Fixed-point with **15 decimal digits**                                  |
+| `format short e`    | Scientific notation with **4 decimal digits**                           |
+| `format long e`     | Scientific notation with **15 decimal digits**                          |
+| `format short g`    | Best of **5-digit fixed or floating point**                             |
+| `format long g`     | Best of **15-digit fixed or floating point**                             |
+| `format bank`       | Fixed-point with **2 decimal digits**                                   |
+| `format compact`    | Eliminates blank lines between outputs                                   |
+| `format loose`      | Adds blank lines between outputs                                         |
 
 ___________________________________________________________________________________________
 
-Elementary math functions
+# Elementary math functions
 
-sqrt (x) - square root of x
-
-nthroot (x, n) - real nth root of a real number x.
-                 (if x is negative n must be an odd integer)
-
-exp (x) - exponential (e^x)
-
-abs (x) - absolute value
-
-log (x) - base e logarithm. (natural logarithm)
-
-log10 (x) - base 10 logarithm
-
-factorial (x) - you know
+| Function           | Meaning                                                                 |
+|-------------------|-------------------------------------------------------------------------|
+| `sqrt(x)`          | Square root of x                                                       |
+| `nthroot(x,n)`     | Real nth root of x. If x < 0, n must be an odd integer                |
+| `exp(x)`           | Exponential: e^x                                                       |
+| `abs(x)`           | Absolute value of x                                                    |
+| `log(x)`           | Natural logarithm (base e)                                            |
+| `log10(x)`         | Base 10 logarithm                                                      |
+| `factorial(x)`     | Factorial of x (x!)                                                   |
 
 ________________________________________________________________________________
 
-Trigonometric math functions
+# Trigonometric math functions
 
-sin (x) - radians
-sind (x) - degrees
+| Function       | Meaning                |
+|----------------|-----------------------|
+| `sin(x)`       | Sine of x (x in **radians**) |
+| `sind(x)`      | Sine of x (x in **degrees**) |
 
-cos (x), cosd (x)
-tan (x), tand (x)
-cot (x), cotd (x)
+* cos (x), cosd (x)
+* tan (x), tand (x)
+* cot (x), cotd (x)
 
 __________________________________________________________________________________
 
-Rounding functions
+# Rounding functions
 
-round (x) - round to nearest integer
-
-fix (x) - round towards 0
-
-ceil (x) - round towards infinity
-
-floor (x) - round towards minus infinity
-
-rem (x, y) - remainder after x is divided by y
-
-sign (x) - signum function.
-           (returns 1 if x>0, -1 if x<0, 0 if x=0)
+| Function       | Meaning                                                                 |
+|----------------|-------------------------------------------------------------------------|
+| `round(x)`     | Round to nearest integer                                               |
+| `fix(x)`       | Round towards 0                                                       |
+| `ceil(x)`      | Round towards +∞ (ceiling)                                           |
+| `floor(x)`     | Round towards -∞ (floor)                                             |
+| `rem(x,y)`     | Remainder after x is divided by y                                     |
+| `sign(x)`      | Signum function: returns 1 if x>0, -1 if x<0, 0 if x=0                  |
 
 ______________________________________________________________________________________________
 
-Var name rules
+# Var name rules
 
 1. must begin with letter
-
 2. up to 63  chars long
-
 3. allows letters, digits, _
-
 4. can't punctuation chars. (period, comma, semicolon)
-
 5. case-sensitive
-
 6. no space
-
 7. avoid function names
-
 ____________________________________________________________________________________________________
 
-Commands for managing var
+# Commands for managing var
 
-clear - rev all var from mem 
-
-clear x - rev only x var from mem
-
-who - display li of var currently in mem
-
-whos - ... also sizes with info about bytes and class
+| Command      | Meaning                                                                 |
+|--------------|-------------------------------------------------------------------------|
+| `clear`      | Remove all variables from memory                                         |
+| `clear x`    | Remove only variable `x` from memory                                     |
+| `who`        | Display list of variables currently in memory                             |
+| `whos`       | Display detailed info about variables: size, bytes, class                |
 
 _________________________________________________________________________________________________
 
