@@ -1,39 +1,28 @@
-Fucking notes to remember
+# Fucking notes to remember
 
 _______________________________________________________________________________
 
-⬆ - A previously typed command can be recalled to the command prompt
-
-⬇ - To move down the list of previously typed commands
-
-; - the output of command is not display in the Command Window
-
-% - beginning of the line, comment
-
-clc - clear the Command Window
-
-+ - addition
- 
-- - subtraction
- 
-* -  multiplication
- 
-/ - right division
-
-\ - left division
-
-^ - exponentiation
+| Symbol / Command | Meaning                                              |
+|-----------------|------------------------------------------------------|
+| `⬆`             | Recall a previously typed command in the Command Window |
+| `⬇`             | Move down the list of previously typed commands    |
+| `;`             | Suppress output of a command in the Command Window |
+| `%`             | Begin a comment                                      |
+| `clc`           | Clear the Command Window                              |
+| `+`             | Addition                                             |
+| `-`             | Subtraction                                          |
+| `*`             | Multiplication                                       |
+| `/`             | Right division                                       |
+| `\`             | Left division                                        |
+| `^`             | Exponentiation                                       |
 
 _________________________________________________________________________________
 
-Order of precedence
+# Order of precedence
 
 1. parentheses (innermost are executed first)
-
 2. exponentiation
-
 3. mutiplication, division
-
 4. addition, subtraction
 
 _________________________________________________________________________________________
