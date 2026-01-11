@@ -1,89 +1,104 @@
-Fucking notes to remember
+# Fucking notes to remember
 
-ADDITION AND SUBTRACTION with Arrays
+# ADDITION AND SUBTRACTION with Arrays
 
 still fucking + -
 
 add (subtract)
-arrays of identical size (the same numbers of rows and columns)
+* arrays of identical size (the same numbers of rows and columns)
 
 ________________________________________________________________________________________
 
-ARRAY MULTIPLICATION
+# ARRAY MULTIPLICATION
 
-A*B can be carried out only if the number of columns in matrix A is equal to the
-number of rows in matrix B.
+```matlab
+A*B 
+```
+\- can be carried out only if the number of columns in matrix A is equal to the number of rows in matrix B.
 
 _____________________________________________________________________________________
 
-Inverse of a matrix
+# Inverse of a matrix
 
-B=inv(A)      (inverse of A and assign it to B)
+```matlab
+B=inv(A)      
+```
+\- inverse of A and assign it to B
 
 ___________________________________________________________________________________
 
-Identity matrix
+# Identity matrix
 
-A*A^-1            (Use the power –1 to find the inverse of A.
-                    Multiplying it by A gives the identity matrix.)
+```matlab
+A*A^-1
+```        
+* Use the power –1 to find the inverse of A.
+* Multiplying it by A gives the identity matrix.
 
 ________________________________________________________________________________________
 
-Determinants
+# Determinants
 
-A = [a b; c d];           (det(A) = a*d - b*c)
+```matlab
+A = [a b; c d];           
 det(A)
+```
+
+\- det(A) = a*d - b*c
 
 _____________________________________________________________________________________
 
-Left division, \
+# Left division, \
 
-A\B     (B÷A)
+```matlab
+A\B
+```
+
+\- B÷A
 
 _________________________________________________________________________
 
-Right division, /
+# Right division, /
 
-A/B     (A÷B)
+```matlab
+A/B
+```
+
+\- A÷B
 
 __________________________________________________________________________________________________
 
-ELEMENT-BY-ELEMENT OPERATIONS
+# ELEMENT-BY-ELEMENT OPERATIONS
 
-operations are carried out on each of the elements of the array (or arrays)
+\- operations are carried out on each of the elements of the array (or arrays)
 
-.*  -  Multiplication
-.^  -  Exponentiation
-./  -  Right division
-.\  -  Left Division
+| Operator | Description       |
+|----------|-----------------|
+| `.*`     | Element-wise multiplication |
+| `.^`     | Element-wise exponentiation |
+| `./`     | Element-wise right division (A ./ B) |
+| `.\`     | Element-wise left division (A .\ B) |
 
 _______________________________________________________________________________________________
 
-USING ARRAYS IN MATLAB BUILT-IN MATH FUNCTIONS
+# USING ARRAYS IN MATLAB BUILT-IN MATH FUNCTIONS
 
-the function is executed on each element of the array.
+\- the function is executed on each element of the array
 
-mean(A)  -  average of the numbers in A
-
-C=max(A)  -  largest element in A
-
-C=min(A)  -  opposite of above
-
-[d,n]=max(A)  -  d is the largest element in A
-                 n is the position of the element     
-
-[d,n]=min(A)  -  opposite of above
-
-sum(A)  -  sum of the elements of the vector
-
-sort(A)  -  arranges the elements of the vector in ascending order
-
-median(A)  -  middle number when the numbers in A are sorted from smallest to biggest
-
-std(A)  -  standard deviation of the elements of the vector
+| Function           | Description |
+|-------------------|------------|
+| `mean(A)`          | Average of the numbers in A |
+| `C = max(A)`       | Largest element in A |
+| `C = min(A)`       | Smallest element in A |
+| `[d,n] = max(A)`   | `d` is the largest element; `n` is its position in A |
+| `[d,n] = min(A)`   | `d` is the smallest element; `n` is its position in A |
+| `sum(A)`           | Sum of all elements in A |
+| `sort(A)`          | Arranges the elements of A in ascending order |
+| `median(A)`        | Middle number when A is sorted from smallest to largest |
+| `std(A)`           | Standard deviation of the elements in A |
 
 ---------------------------------------------------------------------------------------------
-standard deviation
+# Standard deviation
                                                                                           
 A = [2 4 6 8];   % Step 0: Our data set
 
