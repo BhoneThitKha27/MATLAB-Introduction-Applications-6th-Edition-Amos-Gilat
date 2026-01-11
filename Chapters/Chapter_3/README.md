@@ -138,6 +138,7 @@ b = [0 1 0];
 ```
 
 * Step 1: Compute cross product manually
+
 \* Formula: cross(a,b) = [a2*b3 - a3*b2, a3*b1 - a1*b3, a1*b2 - a2*b1]
 
 ```matlab
@@ -151,34 +152,34 @@ C = [ a(2)*b(3) - a(3)*b(2), ...
 
 ______________________________________________________________________________________________________________________
 
-GENERATION OF RANDOM NUMBERS
+# GENERATION OF RANDOM NUMBERS
 
-The randn command
+## The randn command
 
-rand  -  Generates a single random number between 0 and 1
-
-rand(1,n)  -  Generates an n-element row vector of random numbers between 0 and 1
-
-rand(n)  -  Generates an n×n matrix with random numbers between 0 and 1
-
-rand(m,n)  -  Generates an m×n matrix with random numbers between 0 and 1
-
-randperm(n)  -  Generates a row vector with n elements that are random permutation of integers 1 through n
+| Function        | Description                                                                                   |
+|-----------------|-----------------------------------------------------------------------------------------------|
+| `rand`          | Generates a **single random number** between 0 and 1                                           |
+| `rand(1,n)`     | Generates an **n-element row vector** of random numbers between 0 and 1                        |
+| `rand(n)`       | Generates an **n×n matrix** with random numbers between 0 and 1                                 |
+| `rand(m,n)`     | Generates an **m×n matrix** with random numbers between 0 and 1                                 |
+| `randperm(n)`   | Generates a **row vector** with n elements that are a **random permutation** of integers 1..n |
 
 ______________________________________________________________________________________________________________________
 
-The randi command
+# The randi command
 
-randi(imax)  -  Generates a single random number between 1 and imax (imax is an integer)
-
-randi(imax ,n)  -  Generates an n×n matrix with random integers between 1 and imax
-
-randi(imax ,m,n)  -  Generates an m×n matrix with random integers between 1 and imax
+| Function          | Description                                                      |
+|------------------|------------------------------------------------------------------|
+| `randi(imax)`     | Generates a **single random integer** between 1 and `imax`       |
+| `randi(imax, n)`  | Generates an **n×n matrix** with random integers between 1 and `imax` |
+| `randi(imax, m,n)`| Generates an **m×n matrix** with random integers between 1 and `imax` |
 
 ________________________________________________________________________________________________________
 
-The randn command
+# The randn command
 
-randn(m,n)  -  random numbers from a normal distribution with mean 0 and standard deviation 1 (m×n matrix)
+| Function      | Description                                                      |
+|---------------|------------------------------------------------------------------|
+| `randn(m,n)`  | Generates an **m×n matrix** of random numbers from a **normal distribution** (mean 0, standard deviation 1) |
 
 _____________________________________________________________________________________________________________________
