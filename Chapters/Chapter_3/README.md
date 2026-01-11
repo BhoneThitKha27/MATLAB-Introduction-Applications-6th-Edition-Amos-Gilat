@@ -98,44 +98,56 @@ ________________________________________________________________________________
 | `std(A)`           | Standard deviation of the elements in A |
 
 ---------------------------------------------------------------------------------------------
-# Standard deviation
-                                                                                          
-A = [2 4 6 8];   % Step 0: Our data set
+### Standard deviation
 
-meanA = (2 + 4 + 6 + 8) / 4;   % Step 1: Calculate the mean (average) of the numbers
+* Step 0: Our data set                                                                                       
+A = [2 4 6 8];
+meanA = (2 + 4 + 6 + 8) / 4;  
 
-% Step 2-5: Calculate the standard deviation manually
-% 1. Subtract the mean from each number
-% 2. Square the result
-% 3. Add all the squared differences
-% 4. Divide by (n-1) for sample standard deviation
-% 5. Take the square root
+* Step 1: Calculate the mean (average) of the numbers
+* Step 2-5: Calculate the standard deviation manually
+  * 1. Subtract the mean from each number
+  * 2. Square the result
+  * 3. Add all the squared differences
+  * 4. Divide by (n-1) for sample standard deviation
+  * 5. Take the square root
+
+```matlab
 stdA = sqrt( ((2-meanA)^2 + (4-meanA)^2 + (6-meanA)^2 + (8-meanA)^2) / 3 );  
+```
 
-% stdA now contains the standard deviation ≈ 2.58
+\= stdA now contains the standard deviation ≈ 2.58
 
 ------------------------------------------------------------------------------------------------------
 
-dot(a,b)  -  the scalar product of two vectors a and b
-
-cross(a,b)  -  cross product of two vectors a and b
-               (two vectors must have each three elements)
+| Function     | Description                                    | Notes                                |
+|-------------|------------------------------------------------|--------------------------------------|
+| `dot(a,b)`   | Computes the **scalar (dot) product** of two vectors `a` and `b` | Vectors can be any length            |
+| `cross(a,b)` | Computes the **cross product** of two vectors `a` and `b`       | Vectors **must each have 3 elements**|
 
 ---------------------------------------------------------------------------------------------------------
-cross
+### Cross
 
-% Step 0: Define vectors
-a = [1 0 0];  % x-axis
-b = [0 1 0];  % y-axis
+* Step 0: Define vectors
 
-% Step 1: Compute cross product manually
-% Formula: cross(a,b) = [a2*b3 - a3*b2, a3*b1 - a1*b3, a1*b2 - a2*b1]
+```matlab
+a = [1 0 0];
+% x-axis
+b = [0 1 0];
+% y-axis
+```
+
+* Step 1: Compute cross product manually
+\* Formula: cross(a,b) = [a2*b3 - a3*b2, a3*b1 - a1*b3, a1*b2 - a2*b1]
+
+```matlab
 C = [ a(2)*b(3) - a(3)*b(2), ...
       a(3)*b(1) - a(1)*b(3), ...
       a(1)*b(2) - a(2)*b(1) ];
+```
 
-% Step 2: Display result
-C   % Output: [0 0 1] → perpendicular to both a and b
+* Step 2: Display result
+  * C   % Output: [0 0 1] → perpendicular to both a and b
 
 ______________________________________________________________________________________________________________________
 
