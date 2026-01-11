@@ -5,7 +5,7 @@ A specific value is entered in the Command Window when the script file is execut
 ```matlab
 variable_name = input('prompt message','s')
 ```
-% 's' inside the command defines the characters that will be entered as a string
+'s' inside the command defines the characters that will be entered as a string
 
 ____________________________________________________________________________________________________________________________________________________________
 
