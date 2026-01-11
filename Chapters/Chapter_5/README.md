@@ -1,6 +1,6 @@
 # Fucking notes to remember
 
-![Formatted 2D Plot](Photos/formatted_two_dimensional_plot.png)
+![formatted_two_dimensional_plot](Photos/formatted_two_dimensional_plot.png)
 
 **Figure 5-1:** Example of a formatted two-dimensional plot
 
@@ -13,7 +13,7 @@ plot(x,y)  % to create two-dimensional plots
 ```
 two vectors must have the same number of elements
 
-![Formatted 2D Plot](Photos/plot_command.png)
+![plot_command](Photos/plot_command.png)
 
 ----------------------------------------------------------------------------------------------------------
 # Line Specifiers
@@ -99,7 +99,7 @@ ________________________________________________________________________________
 
 # THE fplot COMMAND
 
-![Formatted 2D Plot](Photos/fplot_command.png)
+![fplot_command](Photos/fplot_command.png)
 
 * limits: The limits argument is a vector with two elements that specify the domain of x [xmin,xmax], or a vector with four elements that specifies the domain of x and the limits of the y-axis [xmin,xmax,ymin,ymax].
 
@@ -140,7 +140,7 @@ ________________________________________________________________________________
 
 \- graphs (lines) can be added to a plot that already exists
 
-![Formatted 2D Plot](Photos/line_command.png)
+![line_command](Photos/line_command.png)
 
 ```matlab
 line(x,y,‘linestyle’,‘--’,‘color’,‘r’,‘marker’,‘o’)
@@ -178,8 +178,147 @@ ________________________________________________________________________________
 
 | Command   | Meaning                                                                 |
 |-----------|-------------------------------------------------------------------------|
-| `text(x,y,'string')`  | Places text at coordinates (x,y) in the figure 
-                          (according to the axes of the figure)                    |
-| `gtext('string')`     | User clicks figure to place text interactively                     |
+| `text(x,y,'string')`  | Places text at coordinates (x,y) **according to the axes** in the figure |
+| `gtext('string')`     | User clicks figure to place text interactively                             |
 
-_____________________________________________________________________________________________________-
+_____________________________________________________________________________________________________________________________________________________________
+
+## The legend command
+
+\- The legend shows a sample of the line type of each graph that is plotted, and places a label, specified by the user, beside the line sample
+
+```matlab
+legend(‘string1’,‘string2’, ..... ,‘Location’,‘pos’)
+```
+* The ‘Location’,‘pos’ are optional strings that specifies where in the figure the legend is to be placed
+
+### Several options
+
+| Position | Meaning                                                                 |
+|----------|-------------------------------------------------------------------------|
+| `NE`     | Upper-right corner (default)                                            |
+| `NW`     | Upper-left corner                                                       |
+| `SE`     | Lower-right corner                                                      |
+| `SW`     | Lower-left corner                                                       |
+| `B`      | Inside plot, least interference with graphs                             |
+| `BO`     | Outside plot, least used space                                          |
+
+_____________________________________________________________________________________________________________________________________________________________________
+
+# Formatting the text within the xlabel, ylabel, title, text and legend commands
+
+* The formatting can be done either by adding modifiers inside the string
+
+| Modifier                  | Effect                                 |
+|---------------------------|---------------------------------------|
+| `\bf`                     | Bold font                               |
+| `\it`                     | Italic style                            |
+| `\rm`                     | Normal font                             |
+| `\fontname{fontname}`     | Use specified font                      |
+| `\fontsize{fontsize}`     | Use specified font size                 |
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+### Subscript and superscript
+
+| Symbol         | Meaning                                                                 |
+|----------------|-------------------------------------------------------------------------|
+| `_char`        | Display single character as **subscript**                                |
+| `^char`        | Display single character as **superscript**                              |
+| `_{chars}`     | Display multiple characters as **subscript**                             |
+| `^{chars}`     | Display multiple characters as **superscript**                           |
+
+--------------------------------------------------------------------------------------------------------------
+
+### Greek characters
+
+![greek_char](Photos/greek_char.png)
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+* Formatting of the text that is displayed by the xlabel, ylabel, title, and text commands can also be done by adding optional PropertyName and PropertyValue arguments following the string inside the command
+
+```matlab
+text(x,y,‘text as string’,PropertyName,PropertyValue)
+```
+| Property       | Description                                         | Possible Values / Default         |
+|----------------|-----------------------------------------------------|----------------------------------|
+| `Rotation`     | Orientation of the text                             | Scalar (degrees), Default: 0     |
+| `FontAngle`    | Italic or normal style                               | normal, italic, Default: normal  |
+| `FontName`     | Font of the text                                     | Any system font                  |
+| `FontSize`     | Size of the font                                     | Scalar (points), Default: 10     |
+| `FontWeight`   | Weight of characters                                 | light, normal, bold, Default: normal |
+| `Color`        | Text color                                          | Color specifiers                 |
+| `BackgroundColor` | Background color of rectangular text box         | Color specifiers                 |
+| `EdgeColor`    | Color of edge around text box                        | Color specifiers, Default: none  |
+| `LineWidth`    | Width of edge around text box                        | Scalar (points), Default: 0.5    |
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+## The axis command
+
+\- to change the range and the appearance of the axes
+
+| Command                          | Meaning                                                                 |
+|----------------------------------|-------------------------------------------------------------------------|
+| `axis([xmin,xmax,ymin,ymax])`    | Set limits of both x and y axes (xmin, xmax, ymin, ymax are numbers)   |
+| `axis equal`                     | Use the same scale for both axes                                        |
+| `axis square`                    | Set the axes region to be square                                        |
+| `axis tight`                     | Set axis limits to fit the range of the data                             |
+
+______________________________________________________________________________________________________________________________
+
+## The grid command
+
+| Command   | Meaning                   |
+|-----------|---------------------------|
+| `grid on` | Add grid lines to the plot |
+| `grid off`| Remove grid lines from the plot |
+
+___________________________________________________________________________________________________________________
+
+# PLOTS WITH LOGARITHMIC AXES
+
+| Command          | Meaning                                                                 |
+|-----------------|-------------------------------------------------------------------------|
+| `semilogy(x,y)`  | y vs x plot with **log10 y-axis** and linear x-axis                     |
+| `semilogx(x,y)`  | y vs x plot with **log10 x-axis** and linear y-axis                     |
+| `loglog(x,y)`    | y vs x plot with **log10 scale for both axes**                           |
+
+* Notes for plots with logarithmic axes
+  * The number zero cannot be plotted on a log scale (since a log of zero is not defined).
+  * Negative numbers cannot be plotted on log scales (since a log of a negative number is not defined).
+
+_________________________________________________________________________________________________________________________
+
+# PLOTS WITH ERROR BARS
+
+![symmetric_error_bars](Photos/symmetric_error_bars.png)
+The command for making a plot with error bars that are symmetric
+
+![nonsymmetric_error_bars](Photos/nonsymmetric_error_bars.png)
+The command for making a plot with error bars that are not symmetric
+
+* The lengths of the four vectors x, y, d, and u must be the same.
+* At each point the error bar extends from y(i)-d(i) to y(i)+u(i).
+
+__________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
