@@ -13,7 +13,8 @@ ________________________________________________________________________________
 
 ## The disp Command
 
-```matlab disp(name of a variable) or disp('text as string')```  -  to display the elements of a variable without displaying the name of the variable, and to display text
+```matlab disp(name of a variable) or disp('text as string')```  
+-  to display the elements of a variable without displaying the name of the variable, and to display text
 
 ___________________________________________________________________________________________________________________________________________________________
 
