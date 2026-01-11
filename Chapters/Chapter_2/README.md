@@ -1,18 +1,22 @@
-Fucking notes to remember
+# Fucking notes to remember
 ______________________________________________________________________________________________________
 
-One-dimensional arrray = arranged in a row or column
+* One-dimensional arrray = arranged in a row or column
 
 ______________________________________________________________________________________________________
 
-Creating a vector
+# Creating a vector
 
+```matlab
 var = []
 
-Row vector = [_, _, _]
+% Row vector 
+var = [_, _, _]
 
-Column vector = [_;_;_] or [
+% Column vector 
+var = [_;_;_] or [
                                 ]
+```
 ________________________________________________________________________________________________________
 
 Creating a vector with constant spacing
