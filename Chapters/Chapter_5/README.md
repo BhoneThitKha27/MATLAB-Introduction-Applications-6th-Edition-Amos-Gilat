@@ -6,7 +6,7 @@
 
 ______________________________________________________________________________________________
 
-## THE plot COMMAND
+# THE plot COMMAND
 
 ```matlab
 plot(x,y)  % to create two-dimensional plots
@@ -82,7 +82,7 @@ plot(x,y,'g:d')     % A green dotted line connects the points that are marked wi
 
 -------------------------------------------------------------------------------------------------------------------------
 
-## Property Name and Property Value
+# Property Name and Property Value
 
 ```matlab
 plot(x,y,'-mo','LineWidth',2,'MarkerSize',12,'MarkerEdgeColor','g','MarkerFaceColor','y')
