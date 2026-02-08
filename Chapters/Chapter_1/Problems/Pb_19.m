@@ -6,11 +6,13 @@ p = 114;
 
 gamma = 180-(alpha+beta)
 
-% variable $k$ represents the Ratio of the Law of Sines ( circumdiameter of the triangle )
-
+% variable k represents the Ratio of the Law of Sines ( circumdiameter of the triangle )
+% Start with Perimeter
+% Substitute Sines
+% Factor out k
 k = p/(sind(alpha)+sind(beta)+sind(gamma))
 
-a = k*sind(alpha)
+a = k*sind(alpha) % the Law of Sines
 
 b = k*sind(beta)
 
@@ -22,3 +24,4 @@ s = (a+b+c)/2
 
 
 r = sqrt(((s-a)*(s-b)*(s-c))/s)
+
