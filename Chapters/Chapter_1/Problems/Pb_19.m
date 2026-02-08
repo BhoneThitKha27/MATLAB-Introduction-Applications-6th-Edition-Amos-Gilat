@@ -6,6 +6,8 @@ p = 114;
 
 gamma = 180-(alpha+beta)
 
+% variable $k$ represents the Ratio of the Law of Sines ( circumdiameter of the triangle )
+
 k = p/(sind(alpha)+sind(beta)+sind(gamma))
 
 a = k*sind(alpha)
@@ -17,5 +19,6 @@ c =  k*sind(gamma)
 % Sol (b)
 
 s = (a+b+c)/2
+
 
 r = sqrt(((s-a)*(s-b)*(s-c))/s)
