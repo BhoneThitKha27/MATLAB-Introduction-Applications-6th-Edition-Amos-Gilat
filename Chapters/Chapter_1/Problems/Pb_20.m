@@ -16,3 +16,5 @@ s3 = P(1)*A(3)+A(1)*B(3)+B(1)*P(3)-(P(3)*A(1)+A(3)*B(1)+B(3)*P(1))
 S = sqrt(s1^2+s2^2+s3^2)
 
 d = 2*S/r
+
+% I don’t think this is solved using the math concepts. I’m not good at math anyway — I sleep through most classes.
