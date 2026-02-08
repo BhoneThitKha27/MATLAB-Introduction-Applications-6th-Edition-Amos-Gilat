@@ -1,15 +1,17 @@
-% buses needed
+% Total number of people to be transported
+totalPeople = 777;
 
-nBus = fix(777/46)
+% 1. Calculate how many buses are needed if all buses must be full
+% The 'fix' function rounds toward zero, giving us only the fully filled buses.
+numBuses = fix(totalPeople / 46);
 
-% ppl left after buses
+% 2. Calculate the number of people remaining after the buses are filled
+peopleRemaining = totalPeople - (numBuses * 46);
 
-ppleft = 777-fix(nBus)*46
+% 3. Calculate how many vans are needed to transport the remaining people
+% The 'ceil' function rounds up, ensuring everyone gets a seat even if a van isn't full.
+numVans = ceil(peopleRemaining / 12);
 
-% van needed
-
-nVan = ceil(ppleft/12)
-
-% ppl left to walk
-
-ppWalk = nVan*12-ppleft
+% 4. Calculate how many seats will remain empty in the vans
+% Total seats available in the vans minus the people actually sitting in them.
+emptySeats = (numVans * 12) - peopleRemaining;
